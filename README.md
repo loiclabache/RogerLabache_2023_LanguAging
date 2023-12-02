@@ -63,11 +63,13 @@ For usage of the associated ***code***, please also cite:
 
 ## Code Release
 
-The `Script` folder contains 2 sub-folders: `Analysis` and
-`Visualization`.
+The `Script` folder includes 4 `R` scripts alongside X **simulated**
+`data files`. These simulated files serve as templates, demonstrating
+the required data structure for successfully executing the code.
+**Please note that these files contain simulated, *not real*, data.**
 
-The `Analysis` folder contains the scripts to reproduce the results
-presented in the manuscript.
+The quartet of R scripts is designed to facilitate the replication of
+results as detailed in the manuscript.
 
 - `X.R`: `R` script to \[…\].
 
@@ -84,8 +86,8 @@ share on demand.
 
 The atlas used in the paper is available in the `Atlas` folder.
 
-- The **Language-and-Memory atlas** provide an atlas in standardized MNI
-  volume space of 74 sentence- and memory-related areas (37 by
+- The **Language-and-Memory atlas** provides an atlas in standardized
+  MNI volume space of 74 sentence- and memory-related areas (37 by
   hemisphere). The Language-and-Memory atlas encompasses the core
   regions that compose the stable components for language and memory.
   The Language-and-Memory atlas is composed of multiple brain regions
