@@ -68,14 +68,28 @@ The `Script` folder includes 4 `R` scripts alongside X **simulated**
 the required data structure for successfully executing the code.
 **Please note that these files contain simulated, *not real*, data.**
 
-The quartet of R scripts is designed to facilitate the replication of
-results as detailed in the manuscript.
+The 4 `R` scripts are designed to facilitate the replication of results
+as detailed in the `Method section` of the **manuscript**.
 
-- `X.R`: `R` script to \[…\].
+- `1_GAMM_hROIs.R`: `R` script to model gradient asymmetry trajectories
+  throughout life using factor-smooth Generalized Additive Mixed Models.
+  The script allows to compute the asymmetry trajectories underlying the
+  interaction *Hemisphere×Age* and their confidence intervals.
+- `2_GAMM_Significance.R`: `R` script to assess the significance of the
+  smooth *Hemisphere×Age* interaction by testing for a difference in the
+  smooth term of *Age* between hemispheres. The script applies a False
+  Discovery Rate correction to control for the number of tests
+  conducted.
+- `3_PAM_Clustering.R`: `R` script to classify regions in the
+  **Language-and-Memory** network that demonstrate a significant
+  *Hemisphere×Age* interaction, based on their functional asymmetry
+  skewness profiles. This script also allows to compute the intersection
+  point between the two average clusters curves.
+- `4_CCA_BrainCognitionAssociation.R`: `R` script to proceed with the
+  Canonical Correlation Analysis to assess brain–behavior Associations.
 
-The `Visualization` folder contains `R` files (`FigX_script.R`) used to
-generate each figures included in the manuscript. Each script
-corresponds to a figure or a panel. The brain renderings in the paper
+Note that the `R` scripts also contains the code **to reproduce the
+figures found in the manuscript**. The brain renderings in the paper
 require a customized version of [Surf
 Ice](https://www.nitrc.org/projects/surfice/) that we will be happy to
 share on demand.
