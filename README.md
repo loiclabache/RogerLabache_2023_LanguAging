@@ -84,9 +84,33 @@ share on demand.
 
 The atlas used in the paper is available in the `Atlas` folder.
 
-<!-- -   **SENSAAS** provide an atlas in standardized MNI volume space of 32 sentence-related areas based on a 3-step method combining the analysis of *activation and asymmetry during multiple language tasks* with hierarchical clustering of resting-state connectivity and graph analyses. The temporal correlations at rest between these 32 regions made it possible to detect their belonging to 3 networks. Among these networks, one, *including 18 regions*, contains the essential language areas (**SENT_CORE** network), *i.e.* those whose **lesion would cause an alteration in the understanding of speech**. Full description of the language atlas can be found there: [SENSAAS](https://github.com/loiclabache/SENSAAS_brainAtlas), and the related paper there: [Labache, L., et al. 2019](https://doi.org/10.1007/s00429-018-1810-2). -->
-<!--     -  The *volumetric* (in the MNI ICBM 152 space) and *area* (32k_fs_LR space) atlas are available in the `Atlas/SENSAAS` folder. The sub-folder `Volumetric` contains the volumetric SENSAAS atlas: `SENSAAS_MNI_ICBM_152_2mm.nii`, and a CSV file containing a full description of each language areas: `SENSAAS_description.csv`. The sub-folder `Area` contains the area SENSAAS atlas in the left (`S1200_binarySentCore_L_surface.shape.gii`) and right hemisphere (`S1200_binarySentCore_R_surface.shape.gii`), as well as the hub atlas (*i.e.* regions STS3, STS4 and F3t only) in the left (`S1200_binaryHubsSentCore_L_surface.shape.gii`) and right hemisphere (`S1200_binaryHubsSentCore_R_surface.shape.gii`). -->
-<!--         -  Briefly, the hub language network atlas corresponded to the inferior frontal gyrus (Broca’s area, F3t) and to the posterior aspect  of the superior temporal sulcus (corresponding to Wernicke’s area, STS3 and STS4). -->
+- The **Language-and-Memory atlas** provide an atlas in standardized MNI
+  volume space of 74 sentence- and memory-related areas (37 by
+  hemisphere). The Language-and-Memory atlas encompasses the core
+  regions that compose the stable components for language and memory.
+  The Language-and-Memory atlas is composed of multiple brain regions
+  provided by task-fMRI: one cross-sectional study for language (see
+  [Labache, L., et al. 2019](https://doi.org/10.1007/s00429-018-1810-2),
+  Github repository:
+  [SENSAAS](https://github.com/loiclabache/SENSAAS_brainAtlas)) and one
+  meta-analysis for memory (see [Spaniol, J., et
+  al. 2009](https://doi.org/10.1016/j.neuropsychologia.2009.02.028)).
+  The compilation of the Language-and-Memory atlas was initially
+  undertaken in the following paper: [Roger, E., et
+  al. 2020](https://doi.org/10.1002/hbm.24839).
+  - The file `Atlas/language_memory_atlas.nii.gz` contains the
+    `Volumetric` Language-and-Memory atlas (in MNI ICBM 152 space).
+  - The file `Atlas/language_memory_atlas.txt` contains a full
+    description of each Language-and-Memory areas. The first column
+    *abbreviation* corresponds to the abbreviation of each region. The
+    second column *region* is the anatomical labels of each regions. The
+    third column *hemisphere* is the location of the region in the left
+    or right hemisphere. The fourth column *index* corresponds to the
+    index of each region that is used in the `NIfTI` file. The fifth
+    column *vol_vox* corresponds to the number of voxels in each region.
+    Finally, the MNI coordinate (columns *xmm*, *ymm*, and *zmm*) of
+    each regions centroid is provided.
+
 <p align="center">
 <img src="readme_files/LuM.gif" width="50%" height="50%" />
 </p>
