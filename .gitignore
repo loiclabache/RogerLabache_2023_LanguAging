@@ -1,6 +1,3 @@
-# History files
-.Rhistory
-.Rapp.history
 
 # Session Data files
 .RData
@@ -56,3 +53,7 @@ rsconnect/
 RogerLabache_2023_LanguAging.Rproj
 readme.Rmd
 .Rproj
+
+# History files
+.Rhistory
+.Rapp.history
