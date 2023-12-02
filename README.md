@@ -88,7 +88,7 @@ as detailed in the `Method section` of the **manuscript**.
 - `4_CCA_BrainCognitionAssociation.R`: `R` script to proceed with the
   Canonical Correlation Analysis to assess brain–behavior Associations.
 
-Note that the `R` scripts also contains the code **to reproduce the
+Note that the `R` scripts also contain the code **to reproduce the
 figures found in the manuscript**. The brain renderings in the paper
 require a customized version of [Surf
 Ice](https://www.nitrc.org/projects/surfice/) that we will be happy to
