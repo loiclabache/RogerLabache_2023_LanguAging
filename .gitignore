@@ -1,8 +1,6 @@
 # History files
 .Rhistory
 .Rapp.history
-RogerLabache_2023_LanguAging.Rproj
-readme.Rmd
 
 # Session Data files
 .RData
@@ -54,3 +52,6 @@ rsconnect/
 
 /Atlas/AICHA_v8.nii
 /Atlas/script_atlas_LUM.R
+
+RogerLabache_2023_LanguAging.Rproj
+readme.Rmd
