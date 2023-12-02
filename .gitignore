@@ -51,3 +51,6 @@ po/*~
 rsconnect/
 
 .DS_Store
+
+/Atlas/AICHA_v8.nii
+/Atlas/script_atlas_LUM.R
