@@ -49,17 +49,17 @@ perspective on brain plasticity during the typical aging process**.
 
 For usage of the ***manuscript***, please cite:
 
-- Roger, E., **Labache, L.**, Baciu, M., & Doucet, G. E. (2023). When
-  age tips the balance: a dual mechanisms affecting hemispheric
-  specialization for language. X (2023). DOI:
+- Roger, E., **Labache, L.**, Hamlin, N., Kruse, J., Baciu, M., &
+  Doucet, G. E. (2023). When age tips the balance: a dual mechanisms
+  affecting hemispheric specialization for language. X (2023). DOI:
   [X/X-X-X-X](https://doi.org/X.X/X-X-X-X)
 
 For usage of the associated ***code***, please also cite:
 
-- **Labache, L.**, Roger, E., Baciu, M., & Doucet, G. E. (2023). When
-  age tips the balance: a dual mechanisms affecting hemispheric
-  specialization for language. loiclabache/RogerLabache_2023_LanguAging.
-  DOI:
+- **Labache, L.**, Roger, E., Hamlin, N., Kruse, J., Baciu, M., &
+  Doucet, G. E. (2023). When age tips the balance: a dual mechanisms
+  affecting hemispheric specialization for language.
+  loiclabache/RogerLabache_2023_LanguAging. DOI:
   [10.5281/zenodo.10253278](https://zenodo.org/doi/10.5281/zenodo.10253278)
 
 ------------------------------------------------------------------------
