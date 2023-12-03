@@ -59,7 +59,8 @@ For usage of the associated ***code***, please also cite:
 - Roger, E., **Labache, L.**, Baciu, M., & Doucet, G. E. (2023). When
   age tips the balance: a dual mechanisms affecting hemispheric
   specialization for language. loiclabache/RogerLabache_2023_LanguAging.
-  DOI: [10.5281/zenodo.C](https://doi.org/10.5281/zenodo.C)
+  DOI:
+  [10.5281/zenodo.10253278](https://zenodo.org/doi/10.5281/zenodo.10253278)
 
 ------------------------------------------------------------------------
 
