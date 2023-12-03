@@ -73,7 +73,7 @@ required data structure for successfully executing the code. **Please
 note that these files contain simulated, *not real*, data.**
 
 The 4 `R` scripts are designed to facilitate the replication of results
-as detailed in the `Method section` of the **manuscript**.
+as detailed in the `Method Section` of the **manuscript**.
 
 - `1_GAMM_hROIs.R`: `R` script to model gradient asymmetry trajectories
   throughout life using factor-smooth Generalized Additive Mixed Models.
