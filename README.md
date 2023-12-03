@@ -2,6 +2,8 @@ When Age Tips the Balance: a Dual Mechanism Affecting Hemispheric
 Specialization for Language
 ================
 
+[![DOI](https://zenodo.org/badge/726223472.svg)](https://zenodo.org/doi/10.5281/zenodo.10253278)
+
 ------------------------------------------------------------------------
 
 ## Contents
