@@ -56,7 +56,7 @@ For usage of the ***manuscript***, please cite:
 
 For usage of the associated ***code***, please also cite:
 
-- Roger, E., **Labache, L.**, Baciu, M., & Doucet, G. E. (2023). When
+- **Labache, L.**, Roger, E., Baciu, M., & Doucet, G. E. (2023). When
   age tips the balance: a dual mechanisms affecting hemispheric
   specialization for language. loiclabache/RogerLabache_2023_LanguAging.
   DOI:
