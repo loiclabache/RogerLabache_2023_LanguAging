@@ -63,10 +63,11 @@ For usage of the associated ***code***, please also cite:
 
 ## Code Release
 
-The `Script` folder includes 4 `R` scripts alongside X **simulated**
-`data files`. These simulated files serve as templates, demonstrating
-the required data structure for successfully executing the code.
-**Please note that these files contain simulated, *not real*, data.**
+The `Script` folder includes 4 `R` scripts alongside with 9
+**simulated** data files contained in the sub-folder `Simulated_Data`.
+These simulated data files serve as templates, demonstrating the
+required data structure for successfully executing the code. **Please
+note that these files contain simulated, *not real*, data.**
 
 The 4 `R` scripts are designed to facilitate the replication of results
 as detailed in the `Method section` of the **manuscript**.
