@@ -7,7 +7,7 @@ lapply(packages, require, character.only = T)
 # load trajectories within signficant clusters
 #............................................#
 resdir = "path"
-fit_val = read.csv(file.path(resdir,"fit_trajectories.csv"))[,-1]
+fit_val = read.csv(file.path(resdir,"3_1_fit_trajectories.csv"))[,-1]
 # asym
 fit_asym = fit_val[,c(seq(1,dim(fit_val)[2],by=6)-1)[-1]]
 colnames(fit_asym) = gsub("...AsymFit", "", colnames(fit_asym))
@@ -21,7 +21,7 @@ fit_val_tmp = fit_val = fit_asym
 
 
 
-significance = read.csv(file.path(resdir,"gradient_significance.csv"))
+significance = read.csv(file.path(resdir,"3_2_gradient_significance.csv"))
 roi_sig = significance[significance$significance!=0,]$X
 length(roi_sig)
 
@@ -47,11 +47,11 @@ for(k in 1:end) {
 
 ################################################################################
 ################################################################################
-hemieffect = read.csv(file.path(resdir, "mapHCoef.csv"))[-1] #hemisphere effect
+hemieffect = read.csv(file.path(resdir, "3_3_mapHCoef.csv")) #hemisphere effect
 names(hemieffect) = colnames(fit_val_tmp)
 hemieffect = hemieffect[names(hemieffect) %in% roi_sig]
 
-age <- read.csv(file.path(resdir,"fit_trajectories.csv"))[,-1][,1]
+age <- fit_val$age
 
 # load libraries
 # .............#
@@ -225,7 +225,7 @@ ggplot(res_prop) +
 
 ################################################################################
 ################################################################################
-significance = read.csv(file.path(resdir,"LMN_hROIs.csv"))
+significance = read.csv(file.path(resdir,"3_4_LMN_hROIs.csv"))
 significance = significance[,c(4,7,10)]
 significance_proportion = significance
 significance = significance[significance$Cluster_assignment!=0,]

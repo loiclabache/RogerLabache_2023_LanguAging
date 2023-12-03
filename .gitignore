@@ -49,6 +49,7 @@ rsconnect/
 
 /Atlas/AICHA_v8.nii
 /Atlas/script_atlas_LUM.R
+/Script/simulation_data.R
 
 RogerLabache_2023_LanguAging.Rproj
 readme.Rmd

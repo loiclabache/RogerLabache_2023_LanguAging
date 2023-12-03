@@ -10,7 +10,7 @@ choix_PC = "PC1" # PC1 or PC2 <.................................................
 
 #............................................#
 resdir = "path"
-behavior_data = read_excel(file.path(resdir,"participants_behavior.xlsx"))
+behavior_data = read_excel(file.path(resdir,"4_1_participants_behavior.xlsx"))
 # Keep only relevant behavioral data
 behavior_data = behavior_data[,c(1:4, 6, 5, 14:15, 18, 20)]
 dim(behavior_data)
@@ -70,9 +70,9 @@ distribution_behav
 
 #............................
 # Histograms
-behavior_data_hist = read_excel(file.path(resdir,"participant_behavior.xlsx"))
+behavior_data_hist = read_excel(file.path(resdir,"4_1_participants_behavior.xlsx"))
 behavior_data_hist = behavior_data_hist[,c(1:4, 6, 5, 14:15, 18, 20)]
-bd = read_excel(file.path(resdir,"gradient.xlsx"))
+bd = read_excel(file.path(resdir,"1_1_gradient.xlsx"))
 bd = bd[bd$Sujet %in% behavior_data_hist$Sujet,]
 behavior_data_hist = behavior_data_hist[behavior_data_hist$Sujet %in% bd$Sujet,]
 dim(behavior_data_hist)
@@ -131,7 +131,7 @@ grad_bool = TRUE
 # <...................................................................................................................
 # <...................................................................................................................
 # Reading data
-brain_data = read_excel(file.path(resdir,"gradient.xlsx"))
+brain_data = read_excel(file.path(resdir,"1_1_gradient.xlsx"))
 brain_data = brain_data[brain_data$Sujet %in% behavior_data$Sujet,]
 dim(brain_data)[1]/2
 behavior_data = behavior_data[behavior_data$Sujet %in% brain_data$Sujet,]
@@ -158,19 +158,13 @@ if (asym_bool == FALSE){
 }
 #################
 # more brain data 
-volume = read_excel(file.path(resdir,"VolNorm.xlsx"))
-hiic = read_excel(file.path(resdir,"Data/750sujets_zR_AICHAv8bis.xlsx"))
-ct = read_excel(file.path(resdir,"Data/727sujets_LMN_CTmean.xlsx"))
-ct = ct[ct$Sujet %in% behavior_data$Sujet,]
+volume = read_excel(file.path(resdir,"4_2_VolNorm.xlsx"))
+volume = volume[volume$Sujet %in% behavior_data$Sujet,]
 # get the same participants for all data set
-volume = volume[volume$Sujet %in% ct$Sujet,]
-hiic = hiic[hiic$Sujet %in% ct$Sujet,]
-brain_data = brain_data[brain_data$Sujet %in% ct$Sujet,]
+brain_data = brain_data[brain_data$Sujet %in% volume$Sujet,]
 brain_data$Sujet = NULL
-behavior_data = behavior_data[behavior_data$Sujet %in% ct$Sujet,]
+behavior_data = behavior_data[behavior_data$Sujet %in% volume$Sujet,]
 dim(volume)[1]/2
-dim(hiic)[1]
-dim(ct)[1]/2
 dim(brain_data)[1]
 dim(behavior_data)[1]
 #-
@@ -178,28 +172,18 @@ L_volume = volume[volume$Side=="L",]
 L_volume = L_volume[,c(15:51)]
 R_volume = volume[volume$Side=="R",]
 R_volume = R_volume[,c(15:51)]
-L_ct = volume[volume$Side=="L",]
-L_ct = L_ct[,c(15:51)]
-R_ct = ct[ct$Side=="R",]
-R_ct = R_ct[,c(15:51)]
-hiic = hiic[,c(15:51)]
 if (asym_bool == FALSE){
   colnames(L_volume) = paste0(colnames(L_volume), "_L")
   colnames(R_volume) = paste0(colnames(R_volume), "_R")
   brain_volume = cbind(L_volume, R_volume)
-  colnames(L_ct) = paste0(colnames(L_ct), "_L")
-  colnames(R_ct) = paste0(colnames(R_ct), "_R")
-  brain_ct = cbind(L_ct, R_ct)
 }else{
   brain_volume = L_volume-R_volume
-  brain_ct = L_ct-R_ct
   for(i in 1:dim(brain_volume)[2]){
     brain_volume[,i] = scale(brain_volume[,i])
-    brain_ct[,i] = scale(brain_ct[,i])
   }
 }
 # Select significant ROI
-significance = read.csv(file.path(resdir,"significant_hROIs.csv"))
+significance = read.csv(file.path(resdir,"3_4_LMN_hROIs.csv"))
 significance = significance[significance$Cluster_assignment!=0,]
 significance$RoiSide = ifelse(significance$Cluster_assignment==1, 
                               paste0(significance$Abbreviation, "_R"),
@@ -211,21 +195,13 @@ significance = significance[significance$Cluster_assignment==cluster_choice,]
 if (asym_bool == FALSE){
   brain_data = brain_data[,colnames(brain_data) %in% significance$RoiSide]
   brain_volume = brain_volume[,colnames(brain_volume) %in% significance$RoiSide]
-  brain_ct = brain_ct[,colnames(brain_ct) %in% significance$RoiSide]
 }else{
   brain_data = brain_data[,colnames(brain_data) %in% significance$Abbreviation]
   brain_volume = brain_volume[,colnames(brain_volume) %in% significance$Abbreviation]
-  brain_ct = brain_ct[,colnames(brain_ct) %in% significance$Abbreviation]
-}
-hiic = hiic[,colnames(hiic) %in% significance$Abbreviation]
-for(i in 1:dim(hiic)[2]){
-  hiic[,i] = scale(hiic[,i])
 }
 # rename columns of everything
 colnames(brain_data) = paste0(colnames(brain_data), "_G1")
 colnames(brain_volume) = paste0(colnames(brain_volume), "_VolNorm")
-colnames(hiic) = paste0(colnames(hiic), "_hiic")
-colnames(brain_ct) = paste0(colnames(brain_ct), "_CT")
 # selection of brain variables to inject into the PCA:
 if (grad_bool == TRUE){
   colnames(brain_data) = paste0(colnames(brain_data), " * ", 
@@ -236,7 +212,7 @@ if (grad_bool == TRUE){
                                   significance$Lobe)
   full_brain = cbind(brain_data, brain_volume)
 }else{
-  full_brain = cbind(brain_data, brain_volume, hiic, brain_ct)
+  full_brain = cbind(brain_data, brain_volume)
 }
 dim(full_brain)
 # Select the columns with Age and MMSE as covariates

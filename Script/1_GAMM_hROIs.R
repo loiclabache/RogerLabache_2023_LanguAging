@@ -1,5 +1,5 @@
 base="base"
-database = file.path(paste0(base, "gradient.xlsx"))
+database = file.path(paste0(base, "1_1_gradient.xlsx"))
 
 library(readxl)
 donnees = read_xlsx(database)
@@ -288,7 +288,7 @@ for (i in seq_along(resultats$graphes)) {
 }
 names(updated_graphes) = names(resultats$graphes)
 
-roi_order = read.csv(paste0(base, "/Figure/LuM - lifespan cluster/G1_cluster_traj.txt"))
+roi_order = read.csv(paste0(base, "1_2_gradient_cluster_traj.txt"))
 matched_indices <- match(names(updated_graphes), roi_order$Abbreviation)
 sorted_graphes <- updated_graphes[order(matched_indices)]
 
