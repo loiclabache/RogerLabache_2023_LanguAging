@@ -32,8 +32,8 @@ over two-thirds of Language-and-Memory Network homotopic regions of
 interest undergo asymmetry changes with age, falling into two main
 clusters. The first cluster evolves from left-sided specialization to
 right-sided tendencies, while the second cluster transitions from
-right-sided asymmetry to left-hemisphere dominance. These reversed
-asymmetry shifts manifest around midlife, occurring after age 50, and
+right-sided asymmetry to left-hemisphere dominance. These *reversed
+asymmetry shifts* manifest around midlife, *occurring after age 50*, and
 are associated with poorer language production performance. Our results
 provide valuable insights into the **influence of functional brain
 asymmetries on language proficiency** and present a **dynamic
