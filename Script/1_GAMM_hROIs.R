@@ -1,4 +1,15 @@
-base="base"
+################################################################################
+# Written by James M Roe, Ph.D.
+# Center for Lifespan Changes in Brain and Cognition, Department of Psychology
+# University of Oslo, Oslo, Norway
+# November 12, 2020
+#-------------------------------------------------------------------------------
+# Adapted by Loïc Labache, Ph.D.
+# Holmes Lab Department of Psychology - Yale University
+# December 6, 2023
+################################################################################
+
+base="path"
 database = file.path(paste0(base, "1_1_gradient.xlsx"))
 
 library(readxl)
@@ -323,3 +334,6 @@ wraped_plot_cluster_0 <- do.call("grid.arrange",
                                    ncol = 2))
 
 
+# for further reading see Gavin Simpson's smooth term comparison procedure outlined here
+# https://fromthebottomoftheheap.net/2017/10/10/difference-splines-i/
+# https://fromthebottomoftheheap.net/2017/12/14/difference-splines-ii/

@@ -1,3 +1,14 @@
+################################################################################
+# Written by James M Roe, Ph.D.
+# Center for Lifespan Changes in Brain and Cognition, Department of Psychology
+# University of Oslo, Oslo, Norway
+# November 12, 2020
+#-------------------------------------------------------------------------------
+# Adapted by Loïc Labache, Ph.D.
+# Holmes Lab Department of Psychology - Yale University
+# December 6, 2023
+################################################################################
+
 library(magrittr)
 
 Fval = pp.spl = NULL

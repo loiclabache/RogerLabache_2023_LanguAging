@@ -1,3 +1,9 @@
+################################################################################
+# Written by Loïc Labache, Ph.D.
+# Holmes Lab Department of Psychology - Yale University
+# December 6, 2023
+################################################################################
+
 # open libraries
 #..............#
 packages <- c("readxl", "ggridges", "ggplot2", "tidyr", "pals", "dplyr",
