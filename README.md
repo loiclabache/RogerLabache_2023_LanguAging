@@ -150,6 +150,11 @@ The atlas used in the paper is available in the `Atlas` folder.
   [10.1007/s00429-018-1810-2](https://doi.org/10.1007/s00429-018-1810-2),
   and related GitHub repository:
   [SENSAAS](https://github.com/loiclabache/SENSAAS_brainAtlas)
+- Original Generalized Additive Mixed Models Code for structural MRI
+  data: Roe, J., et al. 2021. DOI:
+  [10.1038/s41467-021-21057-y](https://doi.org/10.1038/s41467-021-21057-y),
+  and related GitHub repository:
+  [AgeSym](https://github.com/jamesmroe/AgeSym)
 
 ------------------------------------------------------------------------
 
