@@ -72,14 +72,9 @@ For usage of the associated ***code***, please also cite:
 
 ## Code Release
 
-The `Script` folder includes 4 `R` scripts alongside with 9
-**simulated** data files contained in the sub-folder `Simulated_Data`.
-These simulated data files serve as templates, demonstrating the
-required data structure for successfully executing the code. **Please
-note that these files contain simulated, *not real*, data.**
-
-The 4 `R` scripts are designed to facilitate the replication of results
-as detailed in the `Method Section` of the **manuscript**.
+The `Script` folder includes 4 `R` scripts. The 4 `R` scripts are
+designed to facilitate the replication of results as detailed in the
+`Method Section` of the **manuscript**.
 
 - `1_GAMM_hROIs.R`: `R` script to model gradient asymmetry trajectories
   throughout life using factor-smooth Generalized Additive Mixed Models.
