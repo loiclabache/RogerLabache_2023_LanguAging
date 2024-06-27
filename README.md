@@ -126,16 +126,17 @@ The atlas used in the paper is available in the `Atlas` folder.
   al. 2020](https://doi.org/10.1002/hbm.24839).
   - The file `Atlas/language_memory_atlas.nii.gz` contains the
     `Volumetric` Language-and-Memory atlas (in MNI ICBM 152 space).
-  - The file `Atlas/language_memory_atlas.txt` contains a full
+  - `Atlas/language_memory_atlas.txt`: text file containing a full
     description of each Language-and-Memory areas. The first column
-    *abbreviation* corresponds to the abbreviation of each region. The
-    second column *region* is the anatomical labels of each regions. The
-    third column *hemisphere* is the location of the region in the left
-    or right hemisphere. The fourth column *index* corresponds to the
-    index of each region that is used in the `NIfTI` file. The fifth
-    column *vol_vox* corresponds to the number of voxels in each region.
-    Finally, the MNI coordinate (columns *xmm*, *ymm*, and *zmm*) of
-    each regions centroid is provided.
+    *Abbreviation* is the abbreviation of a region. The second column
+    *Region* is the full anatomical label of a region. *Hemisphere*
+    refers to the cerebral hemisphere to which a region belongs (“L” for
+    left, “R” for right). *Function* indicates if a regions process
+    language (“L”), memory (“M”), or language and memory (“LM”). *Index*
+    is the index of each region that is used in the `NIfTI` file.
+    *Number of Voxels* is the number of voxels of each region for the
+    2mm version of the atlas. The MNI coordinate (columns *Xmm*, *Ymm*,
+    *Zmm*) of each regions centroid is also provided.
 
 <p align="center">
 <img src="readme_files/LuM.gif" width="50%" height="50%" />
