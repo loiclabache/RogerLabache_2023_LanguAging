@@ -17,13 +17,12 @@ grad_data = read_xlsx(here(path_folder, "/Data/728sujets_LMN_firstGradient.xlsx"
 
 # Generalized Additive Mixed Models.............................................
 #...............................................................................
-# Data Wrangling................................................................
+# Data Handling.................................................................
 gamm_data = grad_data[, c(1,6,14,8,4, 15:51)]
 colnames(gamm_data)[1:5] = c("fsid_base", "Age", "hemi", "Sex", "Site_Name")
 gamm_data$scanner_zscored = (gamm_data$Site_Name - mean(gamm_data$Site_Name)) / sd(gamm_data$Site_Name)
 gamm_data$sex_demean = gamm_data$Sex - mean(gamm_data$Sex)
 gamm_data[, c(4:5)] = NULL
-# gamm_data = gamm_data[gamm_data$scanner_zscored == "-0.378664155473584", ]
 
 # GAMM..........................................................................
 # Some GAMM Parameters..........................................................
@@ -140,7 +139,7 @@ fit_traj_long$region = split_measure[, 1]
 fit_traj_long$side = split_measure[, 2]
 fit_traj_long$measure = split_measure[, 3]
 fit_traj_long$measurement = NULL
-# Wrangling Data for Visualization..............................................
+# Handling Data for Visualization..............................................
 pred_data = fit_traj_long %>% filter(measure == "pred") %>%
   mutate(side = factor(side, levels = c("L", "R", "Asym")))
 se_data = fit_traj_long %>% filter(measure == "SE") %>%
@@ -197,21 +196,3 @@ write.csv(beta_Hemi,
 # See Gavin Simpson's Smooth Term Comparison Procedure..........................
 # https://fromthebottomoftheheap.net/2017/10/11/difference-splines-i/
 # https://fromthebottomoftheheap.net/2017/12/14/difference-splines-ii/
-
-
-
-
-# Dice Index....................................................................
-all_db = read.csv(here("Data", "effect_HemiByAge.csv"))
-camcan_db = read.csv(here("Data", "effect_HemiByAge_CamCAN.csv"))
-intersection_db = sum(all_db$sig_reg_bin & camcan_db$sig_reg_bin)
-sum_all_db = sum(all_db$sig_reg_bin)
-sum_camcan_db = sum(camcan_db$sig_reg_bin)
-dice_index = (2 * intersection_db) / (sum_all_db + sum_camcan_db)
-# A Dice index of 0.92 means that there is a 92% overlap between
-# the two sets, suggesting that the vectors are very similar. 
-# This high value implies that most elements that are TRUE in one vector are 
-# also TRUE in the other vector, and there are very few discrepancies 
-# between them.
-# Also curves are highly similar, minus the extrema, where the 2 others data 
-# bases helped equilibriate the sampling. 
