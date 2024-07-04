@@ -154,7 +154,7 @@ The atlas used in the paper is available in the `Atlas` folder.
 - For additional reading on GAMMs, consult Gavin Simpson’s procedure for
   comparing smooth terms: [Comparing smooths in factor-smooth
   interactions
-  (1/2)](https://fromthebottomoftheheap.net/2017/10/10/difference-splines-i/),
+  (1/2)](https://fromthebottomoftheheap.net/2017/10/11/difference-splines-i/),
   and [Comparing smooths in factor-smooth interactions
   (2/2)](https://fromthebottomoftheheap.net/2017/12/14/difference-splines-ii/)
 
