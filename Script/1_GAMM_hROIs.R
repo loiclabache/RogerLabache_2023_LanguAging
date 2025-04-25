@@ -1,8 +1,9 @@
-################################################################################
-# Written by Loïc Labache, Ph.D.                                               #
-# Holmes Lab, Department of Psychiatry - Rutgers University                    #
-# June 17, 2024                                                                #
-################################################################################
+# ==============================================================================
+# Project: LanguAging
+# Author : Loïc Labache, Ph.D.
+# Lab    : Holmes Lab, Dept. of Psychiatry, Rutgers University
+# Date   : June 17, 2024 
+# ==============================================================================
 
 # Libraries.....................................................................
 #...............................................................................
@@ -12,8 +13,9 @@ lapply(packages, require, character.only = T)
 
 # Data..........................................................................
 #...............................................................................
-path_folder = "/Users/loiclabache/Library/CloudStorage/Dropbox/Collaboration externe/Projet Aging - MB, ER, GD/Conference/OHBM_2023"
-grad_data = read_xlsx(here(path_folder, "/Data/728sujets_LMN_firstGradient.xlsx"))
+path_folder = "/MyProject"
+grad_data = as.data.frame(read_xlsx(here(path_folder, "/Data/728sujets_LMN_firstGradient.xlsx")))
+# grad_data = grad_data[ which(grad_data$PM == "D"), ]
 
 # Generalized Additive Mixed Models.............................................
 #...............................................................................

@@ -20,24 +20,23 @@ Specialization for Language
 
 ## Background
 
-**Aging** engenders neuroadaptations, generally *reducing specificity
-and selectivity* in functional brain responses. Our investigation delves
-into the **functional specialization** of brain hemispheres within
-language-related networks across adulthood. In a cohort of 728 healthy
-adults spanning ages 18 to 88, we modeled the trajectories of
-inter-hemispheric asymmetry concerning the principal functional gradient
-across 37 homotopic regions of interest of an extensive language network
-known as the **Language-and-Memory Network**. Our findings reveal that
-over two-thirds of Language-and-Memory Network homotopic regions of
-interest undergo asymmetry changes with age, falling into two main
-clusters. The first cluster evolves from left-sided specialization to
-right-sided tendencies, while the second cluster transitions from
-right-sided asymmetry to left-hemisphere dominance. These reversed
-asymmetry shifts manifest around midlife, *occurring after age 50*, and
-are associated with poorer language production performance. Our results
-provide valuable insights into the **influence of functional brain
-asymmetries on language proficiency** and present a **dynamic
-perspective on brain plasticity during the typical aging process**.
+**Aging** is accompanied by changes in brain architecture that *alter
+the lateralization of functional networks*. In this study, we examined
+how hemispheric specialization changes across the adult lifespan by
+analyzing resting-state fMRI and structural MRI data from 728 typical
+adults aged 18 to 88. Using the **Language-and-Memory Network** atlas,
+we quantified regional asymmetries in functional connectivity along the
+cortex’s principal gradient, and normalized regional volumes across 37
+bilateral regions. We identified two distinct age-related asymmetry
+trajectories: one pattern revealed a bilateralization of
+language-dominant regions, while the other showed increasing leftward
+specialization in multimodal regions associated with memory and
+language. **These opposing patterns emerged around midlife** and were
+*linked to performance in language production tasks*. By integrating
+connectivity gradients, structural asymmetries, and behavioral data, our
+findings provide new evidence for a dual mechanism reshaping functional
+brain lateralization with age and demonstrate the utility of
+resting-state metrics in tracking these shifts.
 
 <p align="center">
 <img src="readme_files/summary_LanguAging.png" width="70%" height="70%" />
