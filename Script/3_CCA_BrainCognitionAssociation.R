@@ -21,9 +21,9 @@ grad_bool = TRUE # Do we want to work with gradient & VolNorm only?
 # Data..........................................................................
 #...............................................................................
 resdir = '/MyProject'
-behavior_data = read_excel(file.path(resdir, "Data/behaviorialData.xlsx"))
+behavior_data = read_excel(file.path(resdir, "Data/yourBehaviorial_Data.xlsx"))
 # Keep only relevant behavioral data............................................
-behavior_data = behavior_data[,c(1:4, 6, 5, 14:15, 18, 20)]
+behavior_data = behavior_data[,c(1:4, 6, 5, 14:15, 18, 20)] # Select the appropriate columns
 dim(behavior_data)
 colnames(behavior_data)
 for(i in 6:10){
@@ -42,9 +42,9 @@ for(i in 6:10){
 # Behavioral Data Visualization.................................................
 #...............................................................................
 # Histograms by cohorts.........................................................
-behavior_data_hist = read_excel(file.path(resdir, "Data/behaviorialData.xlsx"))
-behavior_data_hist = behavior_data_hist[,c(1:4, 6, 5, 14:15, 18, 20)]
-bd = read_excel(file.path(resdir,"Data/gradientData.xlsx"))
+behavior_data_hist = read_excel(file.path(resdir, "Data/yourBehaviorial_Data.xlsx"))
+behavior_data_hist = behavior_data_hist[,c(1:4, 6, 5, 14:15, 18, 20)] # Select the appropriate columns
+bd = read_excel(file.path(resdir,"Data/yourFirstGradient_LMN_data.xlsx"))
 bd = bd[bd$Sujet %in% behavior_data_hist$Sujet,]
 behavior_data_hist = behavior_data_hist[behavior_data_hist$Sujet %in% bd$Sujet,]
 dim(behavior_data_hist)
@@ -92,7 +92,7 @@ ggplot(plot_data, aes(x = value, fill = AgeGroup)) +
 # PCA...........................................................................
 #...............................................................................
 # Reading data..................................................................
-brain_data = read_excel(file.path(resdir,"Data/gradientData.xlsx"))
+brain_data = read_excel(file.path(resdir,"Data/yourFirstGradient_LMN_data.xlsx"))
 brain_data = brain_data[brain_data$Sujet %in% behavior_data$Sujet,]
 behavior_data = behavior_data[behavior_data$Sujet %in% brain_data$Sujet,]
 # "Pivot" data..................................................................
@@ -116,9 +116,9 @@ if (asym_bool == FALSE){
   brain_data$Sujet = behavior_data$Sujet 
 }
 # More brain data...............................................................
-volume = read_excel(file.path(resdir,"Data/VolNorm.xlsx"))
-hiic = read_excel(file.path(resdir,"Data/hiic.xlsx"))
-ct = read_excel(file.path(resdir,"Data/CTmean.xlsx"))
+volume = read_excel(file.path(resdir,"Data/yourVolNorm_Data.xlsx"))
+hiic = read_excel(file.path(resdir,"Data/yourHIIC_Data.xlsx"))
+ct = read_excel(file.path(resdir,"Data/yourCTmean_Data.xlsx"))
 ct = ct[ct$Sujet %in% behavior_data$Sujet,]
 # get the same participants for all data set....................................
 volume = volume[volume$Sujet %in% ct$Sujet,]
@@ -151,7 +151,7 @@ if (asym_bool == FALSE){
   }
 }
 # Select significant ROI........................................................
-significance = read.csv(file.path(resdir,"Data/LMN_hROIs.csv"))
+significance = read.csv(file.path(resdir, "Atlas/language_memory_atlas.txt"))
 significance = significance[significance$Cluster_assignment!=0,]
 significance$RoiSide = ifelse(significance$Cluster_assignment==1, 
                               paste0(significance$Abbreviation, "_R"),

@@ -48,11 +48,12 @@ resting-state metrics in tracking these shifts.
 
 For usage of the ***manuscript***, please cite:
 
-- Roger, E., **Labache, L.**, Hamlin, N., Kruse, J., Baciu, M., &
-  Doucet, G. E. (2023). When age tips the balance: a dual mechanisms
-  affecting hemispheric specialization for language. *BioRxiv* (2023).
-  DOI:
-  [10.1101/2023.12.04.569978](https://doi.org/10.1101/2023.12.04.569978)
+- Roger, E.$^{†}$, **Labache, L.$^{†}$**, Hamlin, N., Kruse, J., Baciu,
+  M., & Doucet, G. E. (2023). When age tips the balance: a dual
+  mechanisms affecting hemispheric specialization for language.
+  *BioRxiv* (2023). DOI:
+  [10.1101/2023.12.04.569978](https://doi.org/10.1101/2023.12.04.569978).
+  $^{†}$ these authors contributed equally.
 
 For usage of the associated ***code***, please also cite:
 
@@ -61,11 +62,12 @@ For usage of the associated ***code***, please also cite:
   affecting hemispheric specialization for language.
   loiclabache/RogerLabache_2023_LanguAging. DOI:
   [10.5281/zenodo.10253278](https://zenodo.org/doi/10.5281/zenodo.10253278)
-- The *original Generalized Additive Mixed Models Code* for structural
-  MRI data: Roe, J., et al. 2021. DOI:
+- The implementations of the *Generalized Additive Mixed Models* and
+  *Partition Around Medoids algorithm* were adapted from Roe, J., et
+  al. 2021. DOI:
   [10.1038/s41467-021-21057-y](https://doi.org/10.1038/s41467-021-21057-y),
   and related GitHub repository:
-  [AgeSym](https://github.com/jamesmroe/AgeSym)
+  [AgeSym](https://github.com/jamesmroe/AgeSym).
 
 ------------------------------------------------------------------------
 
@@ -90,6 +92,9 @@ are designed to facilitate the replication of results as detailed in the
   point between the two average clusters curves.
 - `3_CCA_BrainCognitionAssociation.R`: `R` script to proceed with the
   Canonical Correlation Analysis to assess brain–behavior Associations.
+
+The `Data` folder contains output files generated from the *Generalized
+Additive Mixed Models* analysis.
 
 Note that the `R` scripts also contain the code **to reproduce the
 figures found in the manuscript**. The brain renderings in the paper

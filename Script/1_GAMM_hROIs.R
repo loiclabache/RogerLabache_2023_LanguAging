@@ -14,13 +14,12 @@ lapply(packages, require, character.only = T)
 # Data..........................................................................
 #...............................................................................
 path_folder = "/MyProject"
-grad_data = as.data.frame(read_xlsx(here(path_folder, "/Data/728sujets_LMN_firstGradient.xlsx")))
-# grad_data = grad_data[ which(grad_data$PM == "D"), ]
+grad_data = as.data.frame(read_xlsx(here(path_folder, "/Data/yourFirstGradient_LMN_data.xlsx"))) # one column by regions
 
 # Generalized Additive Mixed Models.............................................
 #...............................................................................
 # Data Handling.................................................................
-gamm_data = grad_data[, c(1,6,14,8,4, 15:51)]
+gamm_data = grad_data[, c(1,6,14,8,4, 15:51)] # Select the appropriate columns
 colnames(gamm_data)[1:5] = c("fsid_base", "Age", "hemi", "Sex", "Site_Name")
 gamm_data$scanner_zscored = (gamm_data$Site_Name - mean(gamm_data$Site_Name)) / sd(gamm_data$Site_Name)
 gamm_data$sex_demean = gamm_data$Sex - mean(gamm_data$Sex)
@@ -28,7 +27,7 @@ gamm_data[, c(4:5)] = NULL
 
 # GAMM..........................................................................
 # Some GAMM Parameters..........................................................
-roi_index = c(4:40)
+roi_index = c(4:40) # Select the appropriate columns
 roi_name = colnames(gamm_data)[roi_index]
 knots = 6
 seq_age = seq(min(gamm_data$Age), 
