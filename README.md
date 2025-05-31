@@ -48,8 +48,8 @@ resting-state metrics in tracking these shifts.
 
 For usage of the ***manuscript***, please cite:
 
-- Roger, E.$^{†}$, **Labache, L.$^{†}$**, Hamlin, N., Kruse, J., Baciu,
-  M., & Doucet, G. E. (2023). When age tips the balance: a dual
+- Roger, E. $^{†}$, **Labache, L. $^{†}$**, Hamlin, N., Kruse, J.,
+  Baciu, M., & Doucet, G. E. (2023). When age tips the balance: a dual
   mechanisms affecting hemispheric specialization for language.
   *BioRxiv* (2023). DOI:
   [10.1101/2023.12.04.569978](https://doi.org/10.1101/2023.12.04.569978).
