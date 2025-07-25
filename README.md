@@ -44,10 +44,6 @@ resting-state metrics in tracking these shifts.
 
 ------------------------------------------------------------------------
 
-Roger, E., Labache, L., Hamlin, N., Kruse, J., Baciu, M., & Doucet, G.
-E. (2025). When age tips the balance: A dual mechanism affecting
-hemispheric specialization for language. Imaging Neuroscience.
-
 ## Reference
 
 For usage of the ***manuscript***, please cite:
