@@ -44,16 +44,20 @@ resting-state metrics in tracking these shifts.
 
 ------------------------------------------------------------------------
 
+Roger, E., Labache, L., Hamlin, N., Kruse, J., Baciu, M., & Doucet, G.
+E. (2025). When age tips the balance: A dual mechanism affecting
+hemispheric specialization for language. Imaging Neuroscience.
+
 ## Reference
 
 For usage of the ***manuscript***, please cite:
 
-- Roger, E. $^{†}$, **Labache, L. $^{†}$**, Hamlin, N., Kruse, J.,
-  Baciu, M., & Doucet, G. E. (2023). When age tips the balance: a dual
-  mechanisms affecting hemispheric specialization for language.
-  *BioRxiv* (2023). DOI:
-  [10.1101/2023.12.04.569978](https://doi.org/10.1101/2023.12.04.569978).
-  $^{†}$ these authors contributed equally.
+- **Labache, L. $^{†}$**, Roger, E. $^{†}$, Hamlin, N., Kruse, J.,
+  Baciu, M., & Doucet, G. E. (2025). When age tips the balance: A dual
+  mechanism affecting hemispheric specialization for language. *Imaging
+  Neuroscience*. DOI:
+  [10.1162/IMAG.a.63](https://doi.org/10.1162/IMAG.a.63). $^{†}$ these
+  authors contributed equally.
 
 For usage of the associated ***code***, please also cite:
 
@@ -166,5 +170,5 @@ The atlas used in the paper is available in the `Atlas` folder.
 
 ## Questions
 
-Please contact me (Loïc Labache) at: <loic.labache@yale.edu> and/or
-<loic.labache@ensc.fr>, or Élise Roger at: <elise.roger@umontreal.ca>
+Please contact me (Loïc Labache) at: <loic.labache@rutgers.edu>, or
+Élise Roger at: <elise.roger@umontreal.ca>
